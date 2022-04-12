@@ -129,8 +129,8 @@ input:-webkit-autofill {
   background-color: transparent !important; }
 
 img {
-  max-width: 100%;
-  height: 15%; }
+  width: 100%;
+  height: 99%; }
 
 figure {
   margin: 0; }
