@@ -1,29 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
+    <title> Groundwater Management Water Quality Prediction</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ground Water Quality Prediction</title>
+    
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='./fonts/material-icon/css/material-design-iconic-font.min.css')}}" />
 
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='./css/style.css')}}" />
+  </head>
 
-    <link rel="stylesheet" href="css/style.css">
-</head>
+
 <body>
 
     <div class="main">
         <div class="container">
             <div class="form-content">
                 <div class="form-img">
-                    <img src="images/i.jpg" alt="">
+
+                    <img src="{{url_for('static', filename='./images/i.jpg')}}" alt="Image" class="img-fluid">
+
                     <div class="form-img-content">
-                        <h2>Gwm </h2>
+                        <h2>Ground-water Management </h2>
                         <p>Water Quality Prediction</p>
                     </div>
                 </div>
                 <div class="main-form">
-                    <form method="POST" class="temp-form" id="temp-form">
+                    <form  action="{{ url_for('predictObject') }}" method="post"  enctype="multipart/form-data" class="temp-form" id="temp-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <div class="form-input">
@@ -70,8 +75,9 @@
                         <div class="form-submit">
                             <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
                         </div>
+
                         <div class="msg">
-                            <label>Msg</label>
+                            <label>{{msg}}</label>
                             
                         </div>
                     </form>
